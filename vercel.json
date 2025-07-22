@@ -1,16 +1,22 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/[^.]+",
-      "dest": "/birthday.html",
-      "status": 200
-    }
-  ],
   "rewrites": [
     {
       "source": "/(.*)",
       "destination": "/birthday.html"
+    }
+  ],
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/birthday.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     }
   ]
 }
