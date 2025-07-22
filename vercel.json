@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/[^.]+",
+      "dest": "/birthday.html",
+      "status": 200
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/birthday.html"
+    }
+  ]
+}
